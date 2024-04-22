@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput } from "react-native";
 import { Icon } from "react-native-elements";
-import { Btn } from "./button";
+import { Btn } from "./button.jsx";
 
 export const Subscribe = () => {
   const [email, setEmail] = useState("");
