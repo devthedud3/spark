@@ -1,16 +1,18 @@
 import React from "react";
-import { StyleSheet, Pressable, Text, View } from "react-native";
+import { StyleSheet, Text, View, Pressable, Linking } from "react-native";
 
-export const Btn = ({ name, image }) => {
+export const Btn = ({ name, icon, link }) => {
   return (
     <View style={styles.container}>
       <Pressable
-        style={({ pressed }) => [{ opacity: pressed ? 0.5 : 1.0 }]}
-        onPress={() => console.log("Pressed")}
+        style={({ pressed }) => [
+          styles.textContainer,
+          { opacity: pressed ? 0.2 : 1.0 },
+        ]}
+        onPress={() => Linking.openURL(link)}
       >
-        <View style={styles.text}>
-          <Text>{name}</Text>
-        </View>
+        {icon && icon}
+        <Text style={styles.text}>{name}</Text>
       </Pressable>
     </View>
   );
@@ -18,14 +20,22 @@ export const Btn = ({ name, image }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#EEE",
-    paddingVertical: 15,
+    backgroundColor: "white",
     borderRadius: 5,
+    width: "100%",
+    height: "auto",
+    color: "black",
+  },
+  textContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row",
+    height: "auto",
     width: "100%",
   },
   text: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    color: "black",
+    marginLeft: 10,
+    paddingVertical: 18,
   },
 });
