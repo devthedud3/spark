@@ -1,4 +1,4 @@
-import { Btn } from "./button";
+import { Btn } from "./button.jsx";
 import { Subscribe } from "./subscribe";
 import { Profile } from "./profile";
 import { Card } from "./card";
