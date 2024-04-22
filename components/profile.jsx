@@ -2,19 +2,14 @@ import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { Icon } from "react-native-elements";
 
-import { Btn } from "./button";
-
-const profile =
-  "Product/Platform Engineer with a diverse skill set encompassing Web Development, Data Processing, and Application Development. With over 5 years of hands-on experience, I excel in building software and analyzing data to drive business success. I specialize in developing models and reactive websites with a strong emphasis on UX/UI design, utilizing React and Node to deliver cutting-edge solutions. Committed to writing clean and efficient code, I strive to create user-friendly applications that meet the highest standards.";
+import { Btn } from "./button.jsx";
+import { profile } from "../data";
 
 export const Profile = () => {
   return (
     <View style={styles.container}>
       <View style={styles.profileContainer}>
-        <Image
-          source={require("../assets/profile.jpeg")}
-          style={styles.image}
-        />
+        <Image source={require("../assets/profile.png")} style={styles.image} />
 
         <View style={styles.textContainer}>
           <Text style={styles.h1}>Corey Cushnie</Text>
