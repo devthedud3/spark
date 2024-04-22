@@ -7,19 +7,7 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import { Card, Profile, Subscribe } from "./components";
-
-const LINKS = [
-  {
-    name: "LinkedIn",
-    description: "Link to my linkedin account.",
-    link: "https://linkedin.com/in/corey-cushnie",
-  },
-  {
-    name: "Web Portfolio",
-    description: "My personal web portfolio.",
-    link: "https://coreycushnie.com",
-  },
-];
+import { LINKS } from "./data";
 
 export default function App() {
   return (
@@ -50,7 +38,7 @@ const styles = StyleSheet.create({
   main: {
     width: "100%",
     height: "100%",
-    padding: 20,
+    padding: 10,
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
