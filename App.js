@@ -7,7 +7,7 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import { Card, Profile, Subscribe } from "./components";
-import { LINKS } from "./data";
+import { LINKS } from "./data.js";
 
 export default function App() {
   return (
